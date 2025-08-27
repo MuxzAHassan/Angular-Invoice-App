@@ -1,0 +1,39 @@
+.invoices-container {
+    padding: 2rem;
+  }
+  
+  .invoices-container h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .btn-create {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-create:hover {
+    background: #1b5e20;
+  }
+  
+  .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .invoice-table th,
+  .invoice-table td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .invoice-table th {
+    background: #f1f1f1;
+  }
+  

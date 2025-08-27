@@ -1,0 +1,35 @@
+<div class="invoices-container" *ngIf="invoices$ | async as invoices; else noInvoices">
+    <h2>Invoices</h2>
+  
+    <button routerLink="/create-invoice" class="btn-create">+ Create Invoice</button>
+  
+    <table class="invoice-table" *ngIf="invoices.length > 0; else noInvoices">
+      <thead>
+        <tr>
+          <th>Invoice ID</th>
+          <th>Customer</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let invoice of invoices">
+          <td>{{ invoice.id }}</td>
+          <td>{{ invoice.customer }}</td>
+          <td>{{ invoice.date }}</td>
+          <td>{{ invoice.amount | currency:'RM' }}</td>
+          <td>
+            <button [routerLink]="['/edit-invoice', invoice.id]">Edit</button>
+
+            <button (click)="deleteInvoice(invoice.id)" style="margin-left: 15px;">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <ng-template #noInvoices>
+    <p>No invoices found. Click "Create Invoice" to add one.</p>
+  </ng-template>
+  

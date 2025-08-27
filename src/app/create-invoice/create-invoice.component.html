@@ -1,0 +1,33 @@
+<div class="create-invoice-container">
+    <h2>Create New Invoice</h2>
+  
+    <form [formGroup]="invoiceForm" (ngSubmit)="submitInvoice()">
+      <div class="form-group">
+        <label for="customer_name">Customer Name</label>
+        <input
+          type="text"
+          id="customer_name"
+          formControlName="customer_name"
+          placeholder="Enter customer name"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="date">Invoice Date</label>
+        <input type="date" id="date" formControlName="date" />
+      </div>
+  
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input
+          type="number"
+          id="amount"
+          formControlName="amount"
+          placeholder="Enter amount"
+        />
+      </div>
+  
+      <button type="submit" class="btn-submit">Create Invoice</button>
+    </form>
+  </div>
+  

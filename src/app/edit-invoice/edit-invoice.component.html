@@ -1,0 +1,25 @@
+<div class="edit-invoice-container">
+    <h2>Edit Invoice #{{ invoiceId }}</h2>
+  
+    <form [formGroup]="invoiceForm" (ngSubmit)="updateInvoice()">
+      <div class="form-group">
+        <label>Customer Name</label>
+        <input formControlName="customer_name" type="text" placeholder="Edit customer name" />
+      </div>
+  
+      <div class="form-group">
+        <label>Date</label>
+        <input formControlName="date" type="date" placeholder="Edit invoice date" />
+      </div>
+  
+      <div class="form-group">
+        <label>Amount</label>
+        <input formControlName="amount" type="text" placeholder="Edit amount" />
+      </div>
+  
+      <button type="submit">Update Invoice</button>
+      <button type="button" routerLink="/invoices">Cancel</button>
+    </form>
+  </div>
+  
+  
